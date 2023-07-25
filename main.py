@@ -1,5 +1,5 @@
-from helper import url, album_data
 import requests
+from app import url, release_processor
 
 headers = {'Accept': 'application/json, text/javascript',
            'Connection': 'keep-alive',
@@ -13,7 +13,7 @@ def find_metal():
     data = r.json()
 
     if data['aaData'] is not None:
-        album_data.process_list(data['aaData'])
+        release_processor.process_list(data['aaData'])
     else:
         raise Exception("Data not found")
 
