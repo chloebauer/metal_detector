@@ -28,15 +28,11 @@ def process_list(albums):
 def readable_list():
     print("-----Will Most Likely Like-----")
     for album in final_list['fo_sho']:
-        format_album(album)
+        print(album.formatted_output())
         print("----------")
     print("-----Might Be Something Good-----")
     for album in final_list['maybe']:
-        format_album(album)
-
-
-def format_album(album):
-    print(album.formatted_output())
+        print(album.formatted_output())
 
 
 def list_to_album(album_release):
